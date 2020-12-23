@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, CardHeader, CardContent, CardActions, Collapse, IconButton, Typography, makeStyles, Popover, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, makeStyles, Popover, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import avatar from '../images/coverPhoto.jpg'
 import { Image } from 'antd';
@@ -7,57 +7,62 @@ import background from '../images/backgrounds/annie-spratt-nWiS2rgtVts-unsplash.
 import waves from '../images/backgrounds/hal-gatewood-0lGVcrAFHZQ-unsplash.jpg'
 import beach from '../images/backgrounds/brady-corps-ellyLSXQ5wg-unsplash.jpg'
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        // maxWidth: '100%',
-        width: '100%',
-        display: 'flex',
-        backgroundImage: `url(${beach})`,
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        boxShadow:'1px 1px 15px 0px black'
-    },
-    expand: {
-        transform: 'rotate(0deg)',
-        marginLeft: 'auto',
-        transition: theme.transitions.create('transform', {
-            duration: theme.transitions.duration.shortest,
-        }),
-    },
-    expandOpen: {
-        transform: 'rotate(180deg)',
-    },
-    popover: {
-        pointerEvents: 'none',
-    },
-    paper: {
-        padding: theme.spacing(1),
-    },
-    heading: {
-        fontSize: theme.typography.pxToRem(35),
-        flexBasis: '33.33%',
-        flexShrink: 0,
-    },
-    secondaryHeading: {
-        fontSize: theme.typography.pxToRem(15),
-        color: theme.palette.text.secondary,
-        flexBasis: '100%',
-        alignSelf: 'center',
-    },
-    aboutAccordion:{
-        backgroundImage: `url(${background})`,
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-    }
-}));
+// const useStyles = makeStyles((theme) => ({
+//     root: {
+//         // maxWidth: '100%',
+//         width: '100%',
+//         display: 'flex',
+//         backgroundImage: `url(${beach})`,
+//         backgroundAttachment: 'fixed',
+//         backgroundRepeat: 'no-repeat',
+//         backgroundSize: 'cover',
+//         boxShadow:'1px 1px 15px 0px black'
+//     },
+//     media: {
+//         height: '63vh',
+//         width: '40%',
+//         // paddingTop: '56.25%', // 16:9
+//     },
+//     expand: {
+//         transform: 'rotate(0deg)',
+//         marginLeft: 'auto',
+//         transition: theme.transitions.create('transform', {
+//             duration: theme.transitions.duration.shortest,
+//         }),
+//     },
+//     expandOpen: {
+//         transform: 'rotate(180deg)',
+//     },
+//     popover: {
+//         pointerEvents: 'none',
+//     },
+//     paper: {
+//         padding: theme.spacing(1),
+//     },
+//     heading: {
+//         fontSize: theme.typography.pxToRem(35),
+//         flexBasis: '33.33%',
+//         flexShrink: 0,
+//     },
+//     secondaryHeading: {
+//         fontSize: theme.typography.pxToRem(15),
+//         color: theme.palette.text.secondary,
+//         flexBasis: '100%',
+//         alignSelf: 'center',
+//     },
+//     aboutAccordion:{
+//         backgroundImage: `url(${background})`,
+//         backgroundAttachment: 'fixed',
+//         backgroundRepeat: 'no-repeat',
+//         backgroundSize: 'cover',
+//     }
+// }));
 const About = () => {
     const [expanded, setExpanded] = useState(false)
     const [accordionExpanded, setAccordionExpanded] = useState(false)
     const [anchorEl, setAnchorEl] = React.useState(null)
 
-    const classes = useStyles()
+    // const classes = useStyles()
     const open = Boolean(anchorEl)
 
     const handleExpandClick = () => {
@@ -81,18 +86,18 @@ const About = () => {
     return (
 
         <div id='about'>
-            <Accordion onChange={() => handleAboutChange()} className='aboutAccordion'>
+            {/* <Accordion onChange={() => handleAboutChange()} className={classes.aboutAccordion}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography className='heading'>My Story</Typography>
-                    <Typography className='secondaryHeading'>{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
+                    <Typography className={classes.heading}>My Story</Typography>
+                    <Typography className={classes.secondaryHeading}>{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
 
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Card className='root' >
+                    <Card className={classes.root} >
                         <div className='cardInitial'>
                             <CardHeader
                                 title='Personal'
@@ -110,8 +115,8 @@ const About = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
-                                className={'expand', {
-                                    ['expandOpen']: expanded,
+                                className={classes.expand, {
+                                    [classes.expandOpen]: expanded,
                                 }}
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
@@ -125,10 +130,10 @@ const About = () => {
                                 />
                                 <Popover
                                     id="mouse-over-popover"
-                                    className='popover'
-                                    // classes={{
-                                    //     paper: classes.paper,
-                                    // }}
+                                    className={classes.popover}
+                                    classes={{
+                                        paper: classes.paper,
+                                    }}
                                     open={open}
                                     anchorEl={anchorEl}
                                     anchorOrigin={{
@@ -175,7 +180,7 @@ const About = () => {
                         </Collapse>
                     </Card>
                 </AccordionDetails>
-            </Accordion>
+            </Accordion> */}
 
         </div>
 
