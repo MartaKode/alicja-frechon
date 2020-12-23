@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, makeStyles, Popover, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
+import { Card, CardHeader, CardContent, CardActions, Collapse, IconButton, Typography, makeStyles, Popover, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import avatar from '../images/coverPhoto.jpg'
 import { Image } from 'antd';
@@ -17,11 +17,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         boxShadow:'1px 1px 15px 0px black'
-    },
-    media: {
-        height: '63vh',
-        width: '40%',
-        // paddingTop: '56.25%', // 16:9
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -86,18 +81,18 @@ const About = () => {
     return (
 
         <div id='about'>
-            <Accordion onChange={() => handleAboutChange()} className={classes.aboutAccordion}>
+            <Accordion onChange={() => handleAboutChange()} className='aboutAccordion'>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography className={classes.heading}>My Story</Typography>
-                    <Typography className={classes.secondaryHeading}>{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
+                    <Typography className='heading'>My Story</Typography>
+                    <Typography className='secondaryHeading'>{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
 
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Card className={classes.root} >
+                    <Card className='root' >
                         <div className='cardInitial'>
                             <CardHeader
                                 title='Personal'
@@ -115,8 +110,8 @@ const About = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
-                                className={classes.expand, {
-                                    [classes.expandOpen]: expanded,
+                                className={'expand', {
+                                    ['expandOpen']: expanded,
                                 }}
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
@@ -130,10 +125,10 @@ const About = () => {
                                 />
                                 <Popover
                                     id="mouse-over-popover"
-                                    className={classes.popover}
-                                    classes={{
-                                        paper: classes.paper,
-                                    }}
+                                    className='popover'
+                                    // classes={{
+                                    //     paper: classes.paper,
+                                    // }}
                                     open={open}
                                     anchorEl={anchorEl}
                                     anchorOrigin={{
