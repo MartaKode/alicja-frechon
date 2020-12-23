@@ -1,5 +1,4 @@
 import React from 'react'
-import { Avatar } from '@material-ui/core'
 import avatar from '../images/coverPhoto.jpg'
 import { Image } from 'antd';
 const NavBar = () => {
