@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, makeStyles, Popover, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import avatar from '../images/coverPhoto.jpg'
-import { Image } from 'antd';
-import background from '../images/backgrounds/annie-spratt-nWiS2rgtVts-unsplash.jpg'
-import waves from '../images/backgrounds/hal-gatewood-0lGVcrAFHZQ-unsplash.jpg'
-import beach from '../images/backgrounds/brady-corps-ellyLSXQ5wg-unsplash.jpg'
+// import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, makeStyles, Popover, Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core'
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import avatar from '../images/coverPhoto.jpg'
+// import { Image } from 'antd';
+// import background from '../images/backgrounds/annie-spratt-nWiS2rgtVts-unsplash.jpg'
+// import waves from '../images/backgrounds/hal-gatewood-0lGVcrAFHZQ-unsplash.jpg'
+// import beach from '../images/backgrounds/brady-corps-ellyLSXQ5wg-unsplash.jpg'
 
 // const useStyles = makeStyles((theme) => ({
 //     root: {
