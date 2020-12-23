@@ -19,7 +19,7 @@ import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@material-ui/core'
 // import About from './About'
 // import Services from './Services'
-// import Contact from './Contact'
+import Contact from './Contact'
 import { Image, Popover } from 'antd';
 
 
@@ -108,8 +108,8 @@ const HomePage = () => {
             </Carousel>
 
             {/* <About />
-            <Services />
-            <Contact /> */}
+            <Services /> */}
+            <Contact /> 
 
         </div>
     )
