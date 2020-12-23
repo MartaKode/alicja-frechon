@@ -1,38 +1,290 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+  /* border: 1px grey solid; */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  :root{
+    --dark-shades: #271d1d;
+    --orange-color:#d2792d;
+    --light-shades:#dce4d1;
+    --pink-color:#e59ed1;
+    --purple-color:#993c90;
+  
+    /* suggested */
+    --light-shade:rgb(246, 249, 249);
+    --light-accent:#f0bebc;
+    --main-brand-color:#f8a996;
+    --dark-accent:#d19ca1;
+    --dark-shade:#ee7987;
+  
+    /* ping and blue */
+    --purplish:#cdb4db;
+    --light-pinkish:#ffc8dd;
+    --pinkish:#ffafcc;
+    --lihgt-bluish:#bde0fe;
+    --bluish:#a2d2ff;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App{
+    padding-top: 5em;
+    /* background-color: var(--pink-color); */
+    /* background-image: url('./images/backgrounds/annie-spratt-nWiS2rgtVts-unsplash.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  */
   }
-}
+  
+  body{
+    background-image: url('./images/backgrounds/hal-gatewood-0lGVcrAFHZQ-unsplash.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* --------Navbar-------- */
+  
+  #nav {
+    /* background-color: #282828; */
+    background-color: var(--purple-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    cursor: default;
+    height: 4rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(117,9,121,1) 32%, rgba(0,212,255,1) 100%);
+  
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(201,20,208,1) 32%, rgba(255,0,180,1) 64%, rgba(102,8,74,1) 100%);
+  
+  background: rgb(153,60,144);
+  background: linear-gradient(90deg, rgba(153,60,144,1) 25%, rgba(255,0,180,1) 62%, rgba(102,8,74,1) 87%, rgba(0,0,0,1) 100%);
+  
+  
+  background: rgb(153,60,144);
+  background: linear-gradient(90deg, rgba(153,60,144,1) 16%, rgba(255,0,180,1) 48%, rgba(40,236,213,1) 74%, rgba(102,8,74,1) 100%);
+  
+  background: rgb(22,15,2);
+  background: linear-gradient(284deg, rgba(22,15,2,1) 0%, rgba(3,174,245,0.7) 10%, rgba(238,7,180,1) 29%, rgba(153,60,144,1) 69%, rgba(153,60,144,1) 100%);
+  
+  background: rgb(255,0,112);
+  background: radial-gradient(circle, rgba(255,0,112,0.48360655737704916) 0%, rgba(10,2,11,1) 100%);
+  
+  /* background: rgb(1,255,238);
+  background: radial-gradient(circle, rgba(1,255,238,0.44535519125683065) 3%, rgba(255,3,135,0.540983606557377) 33%, rgba(153,60,144,1) 67%); */
+  
+  /* background: rgb(1,255,238);
+  background: radial-gradient(circle, rgba(1,255,238,0.44535519125683065) 0%, rgba(255,3,135,0.540983606557377) 16%, rgba(153,60,144,1) 67%); */
+  
+  /* background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 12%, rgba(253,29,209,0.6666666666666667) 67%, rgba(69,252,252,0.53551912568306) 87%, rgba(0,0,0,0.5109289617486339) 100%); */
+  
+  /* background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 25%, rgba(253,29,209,0.6666666666666667) 76%, rgba(69,252,252,0.53551912568306) 100%); */
+  
+  /* background: rgb(153,60,144);
+  background: linear-gradient(90deg, rgba(153,60,144,1) 25%, rgba(253,29,209,0.6666666666666667) 76%, rgba(69,252,252,0.53551912568306) 100%); */
+  
+  /* background: rgb(153,60,144);
+  background: linear-gradient(90deg, rgba(153,60,144,1) 16%, rgba(253,29,209,0.6666666666666667) 73%, rgba(69,252,252,0.53551912568306) 100%); */
+  }
+  
+    #nav ul {
+      margin-bottom: 0;
+      list-style: none;
+      padding-left: 0;
+  
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    #nav li {
+      display: inline-block;
+      padding-left: 0;
+    }
+    #nav a {
+      -moz-transition: background-color .2s ease-in-out;
+      -webkit-transition: background-color .2s ease-in-out;
+      -ms-transition: background-color .2s ease-in-out;
+      transition: background-color .2s ease-in-out;
+      position: relative;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      font-weight: 600;
+      border-radius: 8px;
+      color: #fff;
+      height: 2.5em;
+      line-height: 2.5em;
+      padding: 0 1.25em;
+    }
+  
+      #nav a:hover {
+        color: #fff !important;
+        background: #ad3fa2a8;
+      }
+  
+      #nav a.active {
+        background: #484848;
+      }
+      #nav a.active:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -0.6em;
+        left: 50%;
+        margin-left: -0.75em;
+        border-left: solid 0.75em transparent;
+        border-right: solid 0.75em transparent;
+        border-top: solid 0.6em #282828;
+      }
+  
+  nav{
+    width: 60%;
+  }
+  
+  .header{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    }
+  
+  .header h1{
+    margin: 0;
+    margin-left:5%;
+    color: var(--light-shades);
+  }
+  
+  .header img{
+    border-radius: 30px;
+  }
+  
+  /* ----------Carousel--------- */
+  
+  .carousel{
+    width: 100%;
+    height: 68vh;
+    padding-top:5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* backdrop-filter: blur(3px); */
+  }
+  
+  .carouselPop{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel img{
+    object-fit: cover;
+    /* object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    /* width: 50%; */
+    border-radius: 20px;
+    padding: 2%;
+  
+    box-shadow: 0px 0px 10px 0px #a2d2ff,  0px 0px 10px 3px #501b49cc;
+    border: 3px outset #a2d2ff;
+    background: #a2d2ff59;
+  
+    box-shadow: 0px 0px 10px 0px #e59ed1,  0px 0px 10px 3px #1b4d50cc;
+    border: 3px outset #e59ed1;
+    background: #e59ed159;
+  }
+  
+  .paperPop{
+    border-radius: 20px;
+    padding: 2%;
+  
+    box-shadow: 0px 0px 10px 0px #a2d2ff,  0px 0px 10px 3px #501b49cc;
+    border: 3px outset #a2d2ff;
+    background: #a2d2ff59;
+  }
+  
+  .ant-popover-inner-content,.ant-popover-arrow {
+    box-shadow: 0px 0px 10px 0px #a2d2ff,  0px 0px 10px 3px #501b49cc;
+    border: 3px outset #a2d2ffc5;
+    background: #a2d2ff59;
+    border-radius:5px;
+  }
+  
+  
+  /* -----About----- */
+  #about{
+    padding-top: 4.5em;
+  }
+  
+  
+  .cardInitial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  
+  
+  /* -----Services----- */
+  
+  #services{
+    padding-top: 5em;
+    align-items: center;
+  
+  }
+  
+  #services img{
+  
+  }
+  
+  /* ------Contact------- */
+  
+  #contact{
+    margin-top: 5em;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background: rgb(255,0,112);
+    background: radial-gradient(circle, rgba(255,0,112,0.48360655737704916) 0%, rgba(10,2,11,1) 100%);
+  /* background-image: url('./images/backgrounds/w-qjCHPZbeXCQ-unsplash.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    box-shadow: 0px 0px 10px 0px #e59ed1,  0px 0px 10px 0px #000000;
+    /* border-top: 10px outset #e59ed1;
+    border-image: url('./images/backgrounds/hal-gatewood-0lGVcrAFHZQ-unsplash.jpg') 30 round; */
+  }
+  
+  #contact h4{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  hr {
+    width: 50%;
+    border: 0;
+    border-top: solid 1px #444;
+    border-top-color: rgba(80, 4, 46, 0.35);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    margin: 1.5em 0 2em 0;
+    /* height: 1px; */
+    /* margin: 3em 0; */
+  }
+  
