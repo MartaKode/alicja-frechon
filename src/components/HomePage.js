@@ -17,7 +17,7 @@ import work from '../images/work.jpg'
 
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@material-ui/core'
-// import About from './About'
+import About from './About'
 // import Services from './Services'
 import Contact from './Contact'
 import { Image, Popover } from 'antd';
@@ -107,8 +107,8 @@ const HomePage = () => {
                 }
             </Carousel>
 
-            {/* <About />
-            <Services /> */}
+            <About />
+            {/* <Services /> */}
             <Contact /> 
 
         </div>
