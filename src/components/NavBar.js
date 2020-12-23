@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
         <div className='navigation' id='nav'>
             <div className='header' >
-                {/* <Image alt="Remy Sharp" src={avatar} className='avatar' style={{ width: '50px', height: '4.5em' }} /> */}
+                <Image alt="Remy Sharp" src={avatar} className='avatar' style={{ width: '50px', height: '4.5em' }} />
                 <h1> Alicja Frechon</h1>
             </div>
             <nav >
