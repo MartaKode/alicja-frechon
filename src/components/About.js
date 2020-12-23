@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const About = () => {
 
@@ -9,6 +9,7 @@ const About = () => {
         </div>
     )
 }
+
 
 
 export default About
