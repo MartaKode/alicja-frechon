@@ -5,7 +5,7 @@ const About = () => {
  
     return (
         <div id='about'>
-    
+            About Section filler
         </div>
     )
 }
