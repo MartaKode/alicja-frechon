@@ -1,6 +1,9 @@
-import { Accordion, AccordionSummary, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Card, CardHeader, Typography } from '@material-ui/core';
 import React, {useState} from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Image } from 'antd';
+import avatar from '../images/coverPhoto.jpg'
+
 
 
 const AboutPage = () => {
@@ -24,6 +27,19 @@ const handleAboutChange = () => {
                     <Typography >{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
 
                 </AccordionSummary>
+                <AccordionDetails>
+                <Card>
+                <div className='cardInitial'>
+                    <CardHeader 
+                    title='Personal'
+                    subheader='Trainer'
+                    />
+
+                    <Image src={avatar} />
+                    
+                </div>
+                </Card>
+                </AccordionDetails>
             </Accordion>
         </div>
     )
