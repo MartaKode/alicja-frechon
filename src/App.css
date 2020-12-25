@@ -41,6 +41,11 @@
     background-size: cover;
   }
   
+  html {
+		box-sizing: border-box;
+		/* `` Mine below ``*/
+		scroll-behavior: smooth;
+	}
   /* --------Navbar-------- */
   
   #nav {
