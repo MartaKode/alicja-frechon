@@ -60,9 +60,6 @@ const AboutPage = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
-                             className={'expand', {
-                                ['expandOpen']: expanded,
-                            }}
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
                                 aria-label="show more"
