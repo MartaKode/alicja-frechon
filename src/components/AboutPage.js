@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Card, CardHeader, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Card, CardContent, CardHeader, Typography } from '@material-ui/core';
 import React, {useState} from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'antd';
@@ -37,6 +37,12 @@ const handleAboutChange = () => {
 
                     <Image src={avatar} />
                     
+                    <CardContent>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                                    This impressive paella is a perfect party dish and a fun meal to cook together with your
+                                    guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                        </Typography>
+                    </CardContent>
                 </div>
                 </Card>
                 </AccordionDetails>
