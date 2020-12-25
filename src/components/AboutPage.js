@@ -63,7 +63,7 @@ const AboutPage = () => {
                              className={'expand', {
                                 ['expandOpen']: expanded,
                             }}
-                                lick={handleExpandClick}
+                                onClick={handleExpandClick}
                                 aria-expanded={expanded}
                                 aria-label="show more"
                             >
