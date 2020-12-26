@@ -34,6 +34,16 @@ const useStyles = makeStyles(theme => ({
         flexBasis: '100%',
         alignSelf: 'center',
     },
+    expand: {
+        transform: 'rotate(0deg)',
+        marginLeft: 'auto',
+        transition: theme.transitions.create('transform', {
+            duration: theme.transitions.duration.shortest,
+        }),
+    },
+    expandOpen: {
+        transform: 'rotate(180deg)',
+    },
 }))
 
 const AboutPage = () => {
@@ -92,6 +102,9 @@ const AboutPage = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
+                               className={classes.expand, {
+                                [classes.expandOpen]: expanded
+                            }}
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
                                 aria-label="show more"
