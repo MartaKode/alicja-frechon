@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Card, CardActions, CardContent, CardHeader, IconButton, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Card, CardActions, CardContent, CardHeader, IconButton, Popover, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'antd';
@@ -70,7 +70,23 @@ const AboutPage = () => {
                                     onMouseEnter={handlePopoverOpen}
                                     onMouseLeave={handlePopoverClose}
                                 />
-
+                                <Popover
+                                    id="mouse-over-popover"
+                                    open={open}
+                                    anchorEl={anchorEl}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'left',
+                                    }}
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'left',
+                                    }}
+                                    onClose={handlePopoverClose}
+                                    disableRestoreFocus
+                                >
+                                    <Typography>{expanded ? 'Show less' : 'Show more'}</Typography>
+                                </Popover>
                             </IconButton>
                         </CardActions>
                     </Card>
