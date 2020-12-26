@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Card, CardActions, CardContent, CardHeader, IconButton, makeStyles, Popover, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Card, CardActions, CardContent, CardHeader, Collapse, IconButton, makeStyles, Popover, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'antd';
@@ -108,7 +108,7 @@ const AboutPage = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
-                               className={expanded ? classes.expand : classes.expandOpen}
+                               className={expanded ? classes.expandOpen : classes.expand }
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
                                 aria-label="show more"
@@ -142,6 +142,12 @@ const AboutPage = () => {
                                 </Popover>
                             </IconButton>
                         </CardActions>
+                        <Collapse in={expanded} timeout="auto" unmountOnExit >
+                            <CardContent>
+                            <Typography paragraph>Method:</Typography>
+
+                            </CardContent>
+                        </Collapse>
                     </Card>
                 </AccordionDetails>
             </Accordion>
