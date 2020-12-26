@@ -1,9 +1,22 @@
-import { Accordion, AccordionDetails, AccordionSummary, Card, CardActions, CardContent, CardHeader, IconButton, Popover, Typography } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, Card, CardActions, CardContent, CardHeader, IconButton, makeStyles, Popover, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'antd';
 import avatar from '../images/coverPhoto.jpg'
+import beach from '../images/backgrounds/brady-corps-ellyLSXQ5wg-unsplash.jpg'
 
+
+const useStyles = makeStyles(theme => ({
+    root: {
+        width: '100%',
+        display: 'flex',
+        backgroundImage: `url(${beach})`,
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        boxShadow:'1px 1px 15px 0px black'
+    }
+}))
 
 const AboutPage = () => {
     const [expanded, setExpanded] = useState(false)
@@ -11,6 +24,7 @@ const AboutPage = () => {
     const [anchorEl, setAnchorEl] = useState(null)
 
     const open = Boolean(anchorEl)
+    const classes = useStyles()
 
     const handleExpandClick = () => {
         setExpanded(!expanded)
@@ -42,7 +56,7 @@ const AboutPage = () => {
 
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Card>
+                    <Card className={classes.root}>
                         <div className='cardInitial'>
                             <CardHeader
                                 title='Personal'
