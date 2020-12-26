@@ -102,9 +102,7 @@ const AboutPage = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
-                               className={classes.expand, {
-                                [classes.expandOpen]: expanded
-                            }}
+                               className={expanded ? classes.expand : classes.expandOpen}
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
                                 aria-label="show more"
