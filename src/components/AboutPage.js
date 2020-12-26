@@ -22,7 +22,18 @@ const useStyles = makeStyles(theme => ({
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-    }
+    },
+    heading: {
+        fontSize: theme.typography.pxToRem(35),
+        flexBasis: '33.33%',
+        flexShrink: 0,
+    },
+    secondaryHeading: {
+        fontSize: theme.typography.pxToRem(15),
+        color: theme.palette.text.secondary,
+        flexBasis: '100%',
+        alignSelf: 'center',
+    },
 }))
 
 const AboutPage = () => {
@@ -58,8 +69,8 @@ const AboutPage = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography >My Story</Typography>
-                    <Typography >{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
+                    <Typography className={classes.heading}>My Story</Typography>
+                    <Typography className={classes.secondaryHeading} >{accordionExpanded ? 'Click to hide my story' : 'Click to see more about me'}</Typography>
 
                 </AccordionSummary>
                 <AccordionDetails>
