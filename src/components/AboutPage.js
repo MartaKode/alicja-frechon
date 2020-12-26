@@ -44,6 +44,12 @@ const useStyles = makeStyles(theme => ({
     expandOpen: {
         transform: 'rotate(180deg)',
     },
+    popover: {
+        pointerEvents: 'none',
+    },
+      paper: {
+        padding: theme.spacing(1),
+    },
 }))
 
 const AboutPage = () => {
@@ -115,6 +121,10 @@ const AboutPage = () => {
                                 />
                                 <Popover
                                     id="mouse-over-popover"
+                                    className={classes.popover}
+                                    classes={{
+                                        paper: classes.paper,
+                                    }}
                                     open={open}
                                     anchorEl={anchorEl}
                                     anchorOrigin={{
