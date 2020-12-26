@@ -4,6 +4,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Image } from 'antd';
 import avatar from '../images/coverPhoto.jpg'
 import beach from '../images/backgrounds/brady-corps-ellyLSXQ5wg-unsplash.jpg'
+import background from '../images/backgrounds/annie-spratt-nWiS2rgtVts-unsplash.jpg'
 
 
 const useStyles = makeStyles(theme => ({
@@ -15,6 +16,12 @@ const useStyles = makeStyles(theme => ({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         boxShadow:'1px 1px 15px 0px black'
+    },
+    aboutAccordion:{
+        backgroundImage: `url(${background})`,
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
     }
 }))
 
@@ -45,7 +52,7 @@ const AboutPage = () => {
     return (
         <div id='about'>
             <button onClick={() => setExpanded(!expanded)}>{expanded ? 'About' : 'Page'}</button>
-            <Accordion onChange={() => handleAboutChange()} >
+            <Accordion onChange={() => handleAboutChange()} className={classes.aboutAccordion} >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
