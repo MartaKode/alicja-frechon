@@ -15,9 +15,9 @@ const useStyles = makeStyles(theme => ({
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        boxShadow:'1px 1px 15px 0px black'
+        boxShadow: '1px 1px 15px 0px black'
     },
-    aboutAccordion:{
+    aboutAccordion: {
         backgroundImage: `url(${background})`,
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
@@ -27,12 +27,15 @@ const useStyles = makeStyles(theme => ({
         fontSize: theme.typography.pxToRem(35),
         flexBasis: '33.33%',
         flexShrink: 0,
+        textAlign: 'center'
     },
     secondaryHeading: {
         fontSize: theme.typography.pxToRem(15),
         color: theme.palette.text.secondary,
         flexBasis: '100%',
         alignSelf: 'center',
+        textAlign: 'center'
+
     },
     expand: {
         transform: 'rotate(0deg)',
@@ -47,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     popover: {
         pointerEvents: 'none',
     },
-      paper: {
+    paper: {
         padding: theme.spacing(1),
     },
 }))
@@ -78,7 +81,6 @@ const AboutPage = () => {
 
     return (
         <div id='about'>
-            <button onClick={() => setExpanded(!expanded)}>{expanded ? 'About' : 'Page'}</button>
             <Accordion onChange={() => handleAboutChange()} className={classes.aboutAccordion} >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
@@ -93,8 +95,9 @@ const AboutPage = () => {
                     <Card className={classes.root}>
                         <div className='cardInitial'>
                             <CardHeader
-                                title='Personal'
-                                subheader='Trainer'
+                                title='Personal Trainer'
+                                subheader='Aerobics instructors'                
+                                subheaderTypographyProps={{color:'white'}}
                             />
 
                             <Image src={avatar} />
@@ -108,17 +111,17 @@ const AboutPage = () => {
                         </div>
                         <CardActions disableSpacing>
                             <IconButton
-                               className={expanded ? classes.expandOpen : classes.expand }
+                                className={expanded ? classes.expandOpen : classes.expand}
                                 onClick={handleExpandClick}
                                 aria-expanded={expanded}
                                 aria-label="show more"
                             >
-                                <ExpandMoreIcon style={{ transform: 'rotate(-90deg)' }}
+                                <ExpandMoreIcon style={{ transform: 'rotate(-90deg)', color:'white' }}
                                     aria-owns={open ? 'mouse-over-popover' : undefined}
                                     aria-haspopup="true"
                                     onMouseEnter={handlePopoverOpen}
                                     onMouseLeave={handlePopoverClose}
-                                />
+                                       />
                                 <Popover
                                     id="mouse-over-popover"
                                     className={classes.popover}
@@ -142,10 +145,10 @@ const AboutPage = () => {
                                 </Popover>
                             </IconButton>
                         </CardActions>
-                        <Collapse in={expanded} timeout="auto" unmountOnExit >
-                            <CardContent>
-                            <Typography paragraph>Method:</Typography>
-                            <Typography paragraph>
+                        <Collapse in={expanded} timeout="auto" unmountOnExit style={{display:'flex', alignItems:'center'}}>
+                            <CardContent className='cardContent'>
+                                <Typography component="p">Method:</Typography>
+                                <Typography paragraph>
                                     Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
                                     minutes.
           </Typography>

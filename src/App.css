@@ -1,5 +1,5 @@
 *{
-  /* border: 1px grey solid; */
+  border: 1px grey solid;
   }
   
   :root{
@@ -292,4 +292,29 @@
     /* height: 1px; */
     /* margin: 3em 0; */
   }
-  
+
+  .MuiCardHeader-title {
+    color: white;
+    font-variant: small-caps;
+    text-align: center;
+  }
+
+  .MuiCardHeader-subheader{
+    color:white;
+    text-align: center;
+  }
+
+  .cardInitial p{
+    color:white;
+    text-align: center;
+  }
+ 
+  .cardContent{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .cardContent p{
+    color: white;
+  }
+
